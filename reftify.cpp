@@ -49,3 +49,16 @@ void postProcessAndDraw(int width, int height) {
         );
     }
 }
+
+
+
+Key Fixes:
+
+Added getNativeStream() helper method to convert OpenCV stream to CUDA stream
+
+Replaced all direct uses of cvStream in CUDA API calls/kernel launches with rawStream
+
+Ensure CUDA stream is properly extracted before any CUDA operations
+
+The error occurred because while cv::cuda::Stream wraps a CUDA stream, we need to explicitly 
+convert it using OpenCV's accessor when interacting with raw CUDA APIs. This conversion maintains stream ordering and ensures proper synchronization between OpenCV and raw CUDA operations.
