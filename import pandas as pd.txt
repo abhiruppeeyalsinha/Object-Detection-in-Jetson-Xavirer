@@ -1,0 +1,56 @@
+import pandas as pd
+
+# Define the data
+data = {
+    "Activity": [
+        "Deeker A.I Development: Train model from scratch with decent accuracy",
+        "Development of initial detection code based on ONNX model",
+        "Development of optimized TensorRT-based model",
+        "Development of TensorRT FP32-based detection code and start of software code and model optimization",
+        "New engine model upgrade with FP16 input and optimization",
+        "Model enhancement using additional images for improved accuracy",
+        "Development of engine model with improved inference speed using FP16 input and output",
+        "Full GPU-based detection code build for IP card with decent detection time",
+        "Merging detection code into main software structure",
+        "Cross-compilation code build for IP card",
+        "Modification of EOTS detection code",
+        "Upgrading EOTS model by retraining with additional images"
+    ],
+    "Status": [
+        "Completed",
+        "Completed",
+        "Completed",
+        "Completed",
+        "Completed",
+        "Completed",
+        "Completed",
+        "Completed",
+        "In Progress",
+        "Completed",
+        "Not Started",
+        "Planned"
+    ],
+    "PDC (Probable Date of Completion)": [
+        "18 Jan 2024",
+        "15 Jan 2024",
+        "22 Jan 2024",
+        "27 Jan 2024",
+        "14 Feb 2024",
+        "31 Mar 2024",
+        "31 Mar 2024",
+        "05 Jun 2024",
+        "10 Jun 2024",
+        "05 Jun 2024",
+        "18 Jun 2024",
+        "15 Jul 2024"
+    ]
+}
+
+# Create a DataFrame
+df = pd.DataFrame(data)
+
+# Save to Excel
+file_path = "/mnt/data/Project_Details_Report_DeekerAI.xlsx"
+df.to_excel(file_path, index=False)
+
+file_path
