@@ -1,0 +1,14 @@
+| **Activity**                                                                                        | **Status**  | **PDC (Probable Date of Completion)** |
+| --------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------- |
+| **Deeker A.I Development: Train model from scratch with decent accuracy**                           | Completed   | 18 Jan 2024                           |
+| Development of initial detection code based on ONNX model                                           | Completed   | 15 Jan 2024                           |
+| Development of optimized TensorRT-based model                                                       | Completed   | 22 Jan 2024                           |
+| Development of TensorRT FP32-based detection code and start of software code and model optimization | Completed   | 27 Jan 2024                           |
+| New engine model upgrade with FP16 input and optimization                                           | Completed   | 14 Feb 2024                           |
+| Model enhancement using additional images for improved accuracy                                     | Completed   | 31 Mar 2024                           |
+| Development of engine model with improved inference speed using FP16 input and output               | Completed   | 31 Mar 2024                           |
+| Full GPU-based detection code build for IP card with decent detection time                          | Completed   | 05 Jun 2024 *(assumed current date)*  |
+| Merging detection code into main software structure                                                 | In Progress | 10 Jun 2024                           |
+| Cross-compilation code build for IP card                                                            | Completed   | 05 Jun 2024 *(assumed current date)*  |
+| Modification of EOTS detection code                                                                 | Not Started | 18 Jun 2024                           |
+| Upgrading EOTS model by retraining with additional images                                           | Planned     | 15 Jul 2024                           |
