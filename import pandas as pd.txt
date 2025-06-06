@@ -54,3 +54,40 @@ file_path = "/mnt/data/Project_Details_Report_DeekerAI.xlsx"
 df.to_excel(file_path, index=False)
 
 file_path
+
++------------------------+
+|  CPU: Input Image      |
++------------------------+
+          |
+          v
++------------------------+
+| Preprocessing on GPU   |   (converts image to float/FP16/CHW format)
++------------------------+
+          |
+          v
++------------------------+
+| Bindings[0] (INPUT)    | --> holds preprocessed image
++------------------------+
+
+          |
+          v
++----------------------------+
+| TensorRT Engine Inference |
++----------------------------+
+          |
+          v
++------------------------+
+| Bindings[1] (OUTPUT)   | --> holds raw detection results
++------------------------+
+
+          |
+          v
++------------------------+
+| Postprocessing         |  (e.g., convert to float, parse boxes, NMS)
++------------------------+
+          |
+          v
++------------------------+
+| Final Detections       |
++------------------------+
+
